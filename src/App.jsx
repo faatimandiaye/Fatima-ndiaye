@@ -10,7 +10,7 @@ import "./index.css";
 
 function App() {
   return (
-    <Router>  {/* ← Navbar et Footer doivent être INSIDE Router */}
+    <Router>
       <div className="app-wrapper">
         <Navbar />
         <main className="main-content">
