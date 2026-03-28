@@ -5,7 +5,9 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-brand">
-          <span className="logo-dot"></span> Fatima
+          <div className="footer-logo">
+            <span className="logo-dot"></span> Fatima
+          </div>
           <p>Créé avec passion et curiosité.</p>
         </div>
 
@@ -27,7 +29,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} MonSite — Tous droits réservés.</p>
+        <p>© {new Date().getFullYear()} Fatima Ndiaye — Tous droits réservés.</p>
       </div>
     </footer>
   );
