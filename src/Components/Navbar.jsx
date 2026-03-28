@@ -1,14 +1,20 @@
-export default function Navbar() {
+import { NavLink } from "react-router-dom"
+
+function Navbar() {
   return (
-    <nav className="bg-blue-600 p-4">
-      <div className="container mx-auto flex justify-between">
-        <h1 className="text-white text-2xl font-bold">Fatima Ndiaye</h1>
-        <ul className="flex space-x-6">
-          <li><a href="#accueil" className="text-white">Accueil</a></li>
-          <li><a href="#about" className="text-white">À propos</a></li>
-          <li><a href="#contact" className="text-white">Contact</a></li>
-        </ul>
+    <nav className="navbar">
+
+      <div className="logo">Fatima</div>
+
+      <div className="menu">
+        <NavLink to="/">Accueil</NavLink>
+        <NavLink to="/projects">Projects</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
       </div>
+
     </nav>
-  );
+  )
 }
+
+export default Navbar
