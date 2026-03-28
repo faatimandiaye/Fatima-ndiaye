@@ -1,71 +1,74 @@
-import React from "react";
-
+import photo from "../assets/photo.jpg"
 function About() {
-  const skills = [
-    "HTML / CSS",
-    "JavaScript",
-    "React",
-    "Git & GitHub",
-    "Responsive Design",
-    "Figma",
-  ];
-
   return (
-    <div className="about-page">
+    <section className="about">
 
-      <div className="about-hero-banner">
-        <div className="about-banner-circle c1"></div>
-        <div className="about-banner-circle c2"></div>
-        <div className="about-banner-circle c3"></div>
-        <div className="about-banner-content">
-          <p className="about-banner-tag">À propos</p>
-          <h1 className="about-banner-title">Qui suis-je ?</h1>
+      <div className="about-container">
+
+      
+        <div className="about-text">
+          <img src={photo} alt="Fatimatou" className="about-img" />
+          <h1>QUI SUIS-JE ?</h1>
+
+          <h2>
+            Je suis Fatimatou Ndiaye, apprenante en Développement Web et Mobile.
+          </h2>
+
+          <p>
+            Je crée des projets avec React et Laravel.
+            J’aime concevoir des interfaces simples, rapides et efficaces.
+          </p>
         </div>
+
+        
+        <div className="skills">
+
+          <div className="skill">
+            <span>HTML ET CSS</span>
+            <div className="progress">
+              <div className="progress-bar html"></div>
+            </div>
+            <span>80%</span>
+          </div>
+
+          <div className="skill">
+            <span>React</span>
+            <div className="progress">
+              <div className="progress-bar react"></div>
+            </div>
+            <span>50%</span>
+          </div>
+
+          <div className="skill">
+            <span>JAVASCRIPT</span>
+            <div className="progress">
+              <div className="progress-bar js"></div>
+            </div>
+            <span>10%</span>
+          </div>
+
+          <div className="skill">
+            <span>Laravel</span>
+            <div className="progress">
+              <div className="progress-bar laravel"></div>
+            </div>
+            <span>75%</span>
+          </div>
+
+          <div className="skill">
+            <span>PHP</span>
+            <div className="progress">
+              <div className="progress-bar php"></div>
+            </div>
+            <span>85%</span>
+          </div>
+
+        </div>
+
       </div>
 
-      <section className="about">
-        <div className="about-container">
-          <div className="about-text">
-            <p className="about-desc">
-              Je suis <strong>Fatima</strong>, étudiante en développement web et
-              mobil, passionnée par la création d'interfaces modernes et
-              intuitives. J'aime apprendre de nouvelles technologies et relever
-              des défis créatifs.
-            </p>
-            <p className="about-desc">
-              Mon objectif est de créer des expériences web qui combinent
-              esthétique et performance, tout en restant accessibles à tous.
-            </p>
-            <div className="about-stats">
-              <div className="stat-card">
-                <span className="stat-num">6+</span>
-                <span className="stat-label">Compétences</span>
-              </div>
-              <div className="stat-card">
-                <span className="stat-num">3+</span>
-                <span className="stat-label">Projets</span>
-              </div>
-              <div className="stat-card">
-                <span className="stat-num">100%</span>
-                <span className="stat-label">Passion</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="about-skills">
-            <p className="section-tag-coral">Compétences</p>
-            <div className="skills-grid">
-              {skills.map((skill) => (
-                <span key={skill} className="skill-badge-coral">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+    </section>
+  )
 }
 
-export default About;
+export default About

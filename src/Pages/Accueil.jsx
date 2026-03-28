@@ -1,42 +1,35 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import monPhoto from "../assets/photo.jpg";
+import { NavLink } from "react-router-dom"
+import About from "./About"       
+import Projects from "./Projects"
+import Contact from "./Contact"
+import photo from "../assets/photo.jpg"
 
 function Accueil() {
   return (
-    <div className="accueil-page">
-      <section className="hero">
-        <div className="hero-content">
-          <p className="hero-tag"> Bienvenue sur mon portfolio</p>
-          <h1 className="hero-title">
-            Je suis <span className="highlight-coral">Fatima</span>,<br />
-            Développeuse Web
-          </h1>
-          <p className="hero-desc">
-            Passionnée par la création d'interfaces modernes, accessibles et
-            agréables à utiliser. Je transforme vos idées en expériences
-            digitales.
-          </p>
-          <div className="hero-btns">
-            <Link to="/projets" className="btn-coral">
-              Voir mes projets
-            </Link>
-            <Link to="/contact" className="btn-outline-coral">
-              Me contacter
-            </Link>
-          </div>
-        </div>
-
-        <div className="hero-visual">
-          <div className="hero-avatar-coral">
-            <img src={monPhoto} alt="Photo de Fatima" />
-          </div>
-          <div className="hero-deco-circle hc1"></div>
-          <div className="hero-deco-circle hc2"></div>
+    <>
+      <section className="hero" id="home">
+        <img src={photo} alt="Fatimatou" className="fatima-img" />
+        <h1>Bonjour, je suis <span>Fatimatou Ndiaye</span></h1>
+        <p className="subtitle">Développeuse Web & Mobile</p>
+        <div className="hero-buttons">
+          <NavLink to="/projects" className="btn">Voir mes projets</NavLink>
+          <NavLink to="/contact" className="btn-outline">Mes contacter</NavLink>
         </div>
       </section>
-    </div>
-  );
+
+      <section id="about">
+        <About />
+      </section>
+
+      <section id="projects">
+        <Projects />
+      </section>
+
+      <section id="contact">
+        <Contact />
+      </section>
+    </>
+  )
 }
 
-export default Accueil;
+export default Accueil
