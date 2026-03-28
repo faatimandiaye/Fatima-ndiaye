@@ -17,7 +17,6 @@ function Contact() {
   return (
     <div className="contact-page">
 
-      {/* Bannière */}
       <div className="contact-banner">
         <div className="contact-banner-circle cb1"></div>
         <div className="contact-banner-circle cb2"></div>
@@ -31,11 +30,9 @@ function Contact() {
         </div>
       </div>
 
-      {/* Contenu */}
       <section className="contact">
         <div className="contact-container">
 
-          {/* Infos */}
           <div className="contact-info">
             <div className="contact-info-card">
               <div className="contact-info-icon"></div>
@@ -60,13 +57,12 @@ function Contact() {
             </div>
           </div>
 
-          {/* Formulaire */}
           <div className="contact-form-wrapper">
             {envoye ? (
               <div className="success-msg-coral">
-                <span className="success-icon"></span>
+                <p className="success-icon"></p>
                 <p>Message envoyé avec succès !</p>
-                <span>Je vous répondrai dans les plus brefs délais.</span>
+                <p className="success-sub">Je vous répondrai dans les plus brefs délais.</p>
               </div>
             ) : (
               <form className="contact-form-coral" onSubmit={handleSubmit}>

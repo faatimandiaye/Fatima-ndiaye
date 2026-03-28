@@ -1511,3 +1511,9 @@ body {
   gap: 6px;
   margin-bottom: 0.6rem;
 }
+
+.success-sub {
+  color: #7a5c50;
+  font-size: 0.95rem;
+  font-weight: 400 !important;
+}
