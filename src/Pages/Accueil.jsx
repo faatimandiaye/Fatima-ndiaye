@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import monPhoto from "../assets/photo.jpg";
 
 function Accueil() {
   return (
@@ -28,10 +29,7 @@ function Accueil() {
 
         <div className="hero-visual">
           <div className="hero-avatar-coral">
-            <img
-              src="https://placehold.co/260x260/ff6b35/ffffff?text=F"
-              alt="Photo de Fatima"
-            />
+            <img src={monPhoto} alt="Photo de Fatima" />
           </div>
           <div className="hero-deco-circle hc1"></div>
           <div className="hero-deco-circle hc2"></div>

@@ -1,4 +1,7 @@
 import React from "react";
+import imgPortfolio from "../assets/portfolio.png";
+import imgTodo from "../assets/todo.png";
+import imgVitrine from "../assets/vitrine.png";
 
 const projets = [
   {
@@ -7,7 +10,7 @@ const projets = [
     desc: "Mon site portfolio développé avec React et déployé sur Vercel.",
     tech: ["React", "CSS", "Vercel"],
     lien: "#",
-    image: "https://placehold.co/400x200/ff6b35/ffffff?text=Portfolio",
+    image: imgPortfolio,
   },
   {
     id: 2,
@@ -15,7 +18,7 @@ const projets = [
     desc: "Une application de gestion de tâches avec ajout, suppression et filtrage.",
     tech: ["React", "LocalStorage"],
     lien: "#",
-    image: "https://placehold.co/400x200/f7931e/ffffff?text=Todo+App",
+    image: imgTodo,
   },
   {
     id: 3,
@@ -23,13 +26,15 @@ const projets = [
     desc: "Site vitrine responsive pour une petite entreprise locale.",
     tech: ["HTML", "CSS", "JavaScript"],
     lien: "#",
-    image: "https://placehold.co/400x200/ff4e6a/ffffff?text=Site+Vitrine",
+    image: imgVitrine,
   },
 ];
 
 function Projets() {
   return (
     <div className="projets-page">
+
+      {/* Bannière */}
       <div className="projets-banner">
         <div className="projets-banner-circle p1"></div>
         <div className="projets-banner-circle p2"></div>
@@ -43,6 +48,7 @@ function Projets() {
         </div>
       </div>
 
+      {/* Grille */}
       <section className="projets">
         <div className="projets-grid">
           {projets.map((projet) => (
